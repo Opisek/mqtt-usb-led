@@ -7,7 +7,7 @@ This project provides you with a simple **IoT interface** for LED lamps powered 
 ## Requirements
 ### Harware
 A dedicated device must be put together to be used with the piece of software. The following are key requirements for your circut:
-- A development board supported by the **Arduino SDK** (recommendation: **WEMOS LOLIN D1 Mini* or other board incorporating an *ESP8266** microcontroller)
+- A development board supported by the **Arduino SDK** (recommendation: **WEMOS LOLIN D1 Mini** or other board incorporating an **ESP8266** microcontroller)
 - A **MOSFET** for **3.3V logic-level PWM** control of a **5V** current (recommendation: **IRLZ44NPBF**)
 
 ### Compilation
