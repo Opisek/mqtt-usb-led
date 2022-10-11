@@ -5,10 +5,12 @@ A simple ESP8266 firmware for controlling USB-powered LED lamps via MQTT (e.g. t
 This project provides you with a simple **IoT interface** for LED lamps powered by 5 volt direct current (like via USB). It is meant to bridge the gap between your Smart Home intfrastructure and your legacy devices in a **non-invasive** way by building an in-line power limiter.
 
 ## Requirements
-### Harware
+### Hardware
 A dedicated device must be put together to be used with the piece of software. The following are key requirements for your circut:
 - A development board supported by the **Arduino SDK** (recommendation: **WEMOS LOLIN D1 Mini** or other board incorporating an **ESP8266** microcontroller)
 - A **MOSFET** for **3.3V logic-level PWM** control of a **5V** current (recommendation: **IRLZ44NPBF**)
+- 5V power input (recommendation: **Female USB C port**) **NOTE:** Do **not** use the USB port built into your board!
+- 5V power output (recommendation: **Female USB A port**) **NOTE:** This is where you will plug in your LED Lamp.
 
 <img src="https://user-images.githubusercontent.com/40141286/195073422-45389734-4970-4b67-8b7b-eb0d884861ae.png" width=400px height=400px>
 
