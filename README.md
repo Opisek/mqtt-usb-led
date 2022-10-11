@@ -10,6 +10,8 @@ A dedicated device must be put together to be used with the piece of software. T
 - A development board supported by the **Arduino SDK** (recommendation: **WEMOS LOLIN D1 Mini** or other board incorporating an **ESP8266** microcontroller)
 - A **MOSFET** for **3.3V logic-level PWM** control of a **5V** current (recommendation: **IRLZ44NPBF**)
 
+<img src="https://user-images.githubusercontent.com/40141286/195072354-9a9c4c51-3687-4243-93d6-c7135947dad5.png" width=400px height=400px>
+
 ### Compilation
 The following Arduino SDK libraries must be included for a successful compilation:
 - knolleary/PubSubClient
