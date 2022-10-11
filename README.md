@@ -8,7 +8,7 @@ This project provides you with a simple **IoT interface** for LED lamps powered 
 ### Hardware
 A dedicated device must be put together to be used with the piece of software. The following are key requirements for your circut:
 - A development board supported by the **Arduino SDK** (recommendation: **WEMOS LOLIN D1 Mini** or other board incorporating an **ESP8266** microcontroller)
-- A **MOSFET** for **3.3V logic-level PWM** control of a **5V** current (recommendation: **IRLZ44NPBF**)
+- A **MOSFET** for **3.3V logic-level PWM** control of a **5V** current (recommendation: **IRFZ44N**)
 - 5V power input (recommendation: **Female USB C port**) **NOTE:** Do **not** use the USB port built into your board!
 - 5V power output (recommendation: **Female USB A port**) **NOTE:** This is where you will plug in your LED Lamp.
 
