@@ -33,6 +33,7 @@ The **config.h** file must be edited to configure the following:
 - MQTT base topic
 - MOSFET gate pin
 - Brightness transition speed
+
 Additionally the following can be set to enable automatic integration with Home Assistant
 - MQTT discovery topic
 - Device name and ID
