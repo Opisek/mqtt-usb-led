@@ -38,4 +38,4 @@ Additionally the following can be set to enable automatic integration with Home 
 - Device name and ID
 
 ### Home Assistant
-The easiest way to enable Home Assistant integration is to configure automatic MQTT discovery. This way, you can simply add your device's control to your dashboard.
+The easiest way to enable Home Assistant integration is to configure automatic MQTT discovery. This way, you can simply add your device to your dashboard.
