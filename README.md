@@ -34,7 +34,7 @@ The **config.h** file must be edited to configure the following:
 - MOSFET gate pin
 - Brightness transition speed
 
-Additionally the following can be set to enable automatic integration with Home Assistant
+Additionally the following can be set to enable automatic integration with Home Assistant:
 - MQTT discovery topic
 - Device name and ID
 
