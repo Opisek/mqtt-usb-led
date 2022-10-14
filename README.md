@@ -12,7 +12,7 @@ A dedicated device must be put together to be used with the piece of software. T
 - 5V power input (recommendation: **Female USB C port**) **NOTE:** Do **not** use the USB port built into your board!
 - 5V power output (recommendation: **Female USB A port**) **NOTE:** This is where you will plug in your LED Lamp.
 
-<img src="https://user-images.githubusercontent.com/40141286/195073422-45389734-4970-4b67-8b7b-eb0d884861ae.png" width=400px height=400px>
+<img src="https://user-images.githubusercontent.com/40141286/195949428-fd9daea4-3042-412d-99e7-db9a311f3867.png" width=400px height=400px>
 
 ### Compilation
 The following Arduino SDK libraries must be included for a successful compilation:
