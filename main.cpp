@@ -72,7 +72,7 @@ void mqttCallback(char* topic, byte* payload, unsigned int length) {
     level *= 10;
     level += payload[i] - '0';
   }
-  Serial.write(topic);
+  //Serial.write(topic);
   if (std::strcmp(topic, MQTT_BASE "power") == 0) {
     brightness = lastBrightness * (level != 0);
   } else {
