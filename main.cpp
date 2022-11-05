@@ -11,13 +11,13 @@ WiFiClient wifiClient;
 PubSubClient mqttClient(MQTT_ADDRESS, MQTT_PORT, mqttCallback, wifiClient);
 
 String mqttName;
-int brightness;
-int lastBrightness;
+bool power;
+int setBrightness;
+int wantedBrightness;
 float currentBrightness;
 long lastMillis;
 
 void setup() {
-  //Serial.begin(115200);
   pinMode (LAMP_PIN, OUTPUT);
 
   IPAddress lanAddress, lanGateway, lanSubnet;
@@ -32,8 +32,9 @@ void setup() {
   WiFi.macAddress(mac);
   for (int i = 0; i < 6; ++i) mqttName += String(mac[i], 16);
 
-  brightness = 0;
-  lastBrightness = 0;
+  power = 0;
+  setBrightness = 0;
+  wantedBrightness = 0;
   currentBrightness = 0;
   lastMillis = millis();
   analogWrite(LAMP_PIN, 0);
@@ -45,9 +46,9 @@ void loop() {
   if (deltaTime < 0) deltaTime = 0; // rollover protection
   float change = deltaTime * TRANSITION_SPEED;
   lastMillis = currentMillis;
-  if (brightness != currentBrightness) {
-    if (abs(brightness - currentBrightness) <= change) currentBrightness = brightness;
-    else currentBrightness += change * ((brightness > currentBrightness) - .5f) * 2;
+  if (wantedBrightness != currentBrightness) {
+    if (abs(wantedBrightness - currentBrightness) <= change) currentBrightness = wantedBrightness;
+    else currentBrightness += change * ((wantedBrightness > currentBrightness) - .5f) * 2;
     analogWrite(LAMP_PIN, currentBrightness);
   }
 
@@ -72,11 +73,7 @@ void mqttCallback(char* topic, byte* payload, unsigned int length) {
     level *= 10;
     level += payload[i] - '0';
   }
-  Serial.write(topic);
-  if (std::strcmp(topic, MQTT_BASE "power") == 0) {
-    brightness = lastBrightness *  (level != 0);
-  } else {
-    brightness = level;
-    lastBrightness = level;
-  } 
+  if (std::strcmp(topic, MQTT_BASE "power") == 0) power = (level != 0);
+  else setBrightness = level;
+  wantedBrightness = setBrightness *  power;
 }
